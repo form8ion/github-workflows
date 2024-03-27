@@ -32,7 +32,7 @@ form8ion plugin for managing GitHub workflows
 ### Installation
 
 ```sh
-$ npm install @form8ion/github-workflows
+$ npm install @form8ion/github-workflows --save-prod
 ```
 
 ### Example
