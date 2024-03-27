@@ -1,0 +1,6 @@
+_extends: .github
+repository:
+  name: github-workflows
+  description: form8ion plugin for managing GitHub workflows
+  homepage: https://npm.im/@form8ion/github-workflows
+  private: false
