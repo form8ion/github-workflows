@@ -26,6 +26,7 @@ form8ion plugin for managing GitHub workflows
 [![MIT license][license-badge]][license-link]
 [![npm][npm-badge]][npm-link]
 [![Try @form8ion/github-workflows on RunKit][runkit-badge]][runkit-link]
+![node][node-badge]
 
 <!--consumer-badges end -->
 
@@ -117,3 +118,5 @@ $ npm test
 [runkit-link]: https://npm.runkit.com/@form8ion/github-workflows
 
 [runkit-badge]: https://badge.runkitcdn.com/@form8ion/github-workflows.svg
+
+[node-badge]: https://img.shields.io/node/v/@form8ion/github-workflows?logo=node.js

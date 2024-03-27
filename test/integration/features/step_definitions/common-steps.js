@@ -10,6 +10,7 @@ const stubbedNodeModules = stubbedFs.load(resolve(__dirname, '..', '..', '..', '
 let scaffold;
 
 Before(async function () {
+  this.projectRoot = process.cwd();
   // eslint-disable-next-line import/no-extraneous-dependencies,import/no-unresolved
   ({scaffold} = await import('@form8ion/github-workflows'));
 
