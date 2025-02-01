@@ -82,7 +82,6 @@
     "vitest": "3.0.4"
   },
   "dependencies": {
-    "@form8ion/github-workflows-core": "^5.5.0",
-    "make-dir": "^4.0.0"
+    "@form8ion/github-workflows-core": "^5.5.0"
   }
 }

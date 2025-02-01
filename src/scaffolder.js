@@ -1,7 +1,7 @@
-import makeDir from 'make-dir';
+import {promises as fs} from 'node:fs';
 
 export default async function ({projectRoot}) {
-  await makeDir(`${projectRoot}/.github/workflows`);
+  await fs.mkdir(`${projectRoot}/.github/workflows`, {recursive: true});
 
   return {};
 }

@@ -1,11 +1,11 @@
-import makeDir from 'make-dir';
+import {promises as fs} from 'node:fs';
 
 import any from '@travi/any';
 import {vi, describe, it, expect, afterEach} from 'vitest';
 
 import scaffold from './scaffolder.js';
 
-vi.mock('make-dir');
+vi.mock('node:fs');
 
 describe('scaffolder', () => {
   afterEach(() => {
@@ -17,6 +17,6 @@ describe('scaffolder', () => {
 
     expect(await scaffold({projectRoot})).toEqual({});
 
-    expect(makeDir).toHaveBeenCalledWith(`${projectRoot}/.github/workflows`);
+    expect(fs.mkdir).toHaveBeenCalledWith(`${projectRoot}/.github/workflows`, {recursive: true});
   });
 });
