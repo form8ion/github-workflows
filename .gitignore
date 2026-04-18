@@ -3,7 +3,6 @@
 /coverage/
 
 .eslintcache
-
 .idea
 !.idea/
 .idea/*
