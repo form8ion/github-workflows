@@ -18,5 +18,6 @@ describe('scaffolder', () => {
     expect(await scaffold({projectRoot})).toEqual({});
 
     expect(fs.mkdir).toHaveBeenCalledWith(`${projectRoot}/.github/workflows`, {recursive: true});
+    expect(fs.writeFile).toHaveBeenCalledWith(`${projectRoot}/.github/workflows/.gitkeep`, '');
   });
 });
