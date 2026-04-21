@@ -55,6 +55,7 @@
   },
   "packageManager": "npm@11.12.1+sha512.cdca14b85d647b3192028d02aadbe82d75f79a446aceea9874be98e6d768f20ebd3555770a48d0e9906106007877bbc690f715e9372f2e2dc644a3c3157fb14c",
   "dependencies": {
+    "@form8ion/github-core": "^2.0.0",
     "@form8ion/github-workflows-core": "^6.0.0"
   },
   "devDependencies": {
@@ -63,6 +64,7 @@
     "@form8ion/core": "4.11.1",
     "@form8ion/eslint-config": "7.1.0-beta.1",
     "@form8ion/eslint-config-cucumber": "1.4.1",
+    "@form8ion/eslint-config-vitest": "1.1.0",
     "@form8ion/remark-lint-preset": "6.0.7",
     "@travi/any": "3.3.0",
     "@vitest/coverage-v8": "4.1.4",

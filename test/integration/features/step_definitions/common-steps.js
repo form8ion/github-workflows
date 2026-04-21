@@ -7,12 +7,12 @@ import stubbedFs from 'mock-fs';
 const __dirname = dirname(fileURLToPath(import.meta.url));          // eslint-disable-line no-underscore-dangle
 const stubbedNodeModules = stubbedFs.load(resolve(__dirname, '..', '..', '..', '..', 'node_modules'));
 
-let scaffold;
+let scaffold, qualify;
 
 Before(async function () {
   this.projectRoot = process.cwd();
   // eslint-disable-next-line import/no-extraneous-dependencies,import/no-unresolved
-  ({scaffold} = await import('@form8ion/github-workflows'));
+  ({scaffold, qualify} = await import('@form8ion/github-workflows'));
 
   stubbedFs({
     node_modules: stubbedNodeModules
@@ -24,5 +24,7 @@ After(function () {
 });
 
 When('the project is scaffolded', async function () {
-  await scaffold({projectRoot: process.cwd()});
+  if (await qualify({projectRoot: this.projectRoot})) {
+    await scaffold({projectRoot: this.projectRoot});
+  }
 });
